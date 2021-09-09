@@ -1,0 +1,471 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: hidden;
+}
+/*===================== Responsivo ============================*/
+/* esse container ja esta responsivo*/
+#container {
+    width: 800px;
+    height: 100vh;
+    background-image: url('images/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    margin: 0 auto;
+    display: none;
+}
+/*=================== estrelas {width: 100%} =========================*/
+/*====================================================================*/
+#aviao {
+    position: absolute;
+    width: 150px;
+}
+
+.tiroJog {
+    width: 6px;
+    height: 15px;
+    background-color: white;
+    border: 2px solid rgb(93, 127, 138);
+    border-radius: 100%;
+    position: absolute;
+}
+
+#gif {
+    width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    top: -100vh;
+    background-color: rgba(255, 0, 0, 0.199);
+    background-image: url('images/esg.gif');
+    opacity: 0.2;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#estrelas {
+    width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    top: -100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    white-space: nowrap;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+    display: none;
+}
+
+#gameOver,#win {
+    width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.789);
+    position: absolute;
+    z-index: 99;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameOver2,#win2 {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameOver2 img,#win img {
+    width: 500px;
+    height: 400px;
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes slideInDown {
+    0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        visibility: visible;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+#estrelas img {
+    width: 100%;
+    height: 100vh;
+}
+
+.bomba {
+    width: 20px;
+    height: 70px;
+    position: absolute;
+    background-image: url('images/bomba.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.explosaoChao {
+    width: 55px;
+    height: 57px;
+    position: absolute;
+}
+
+.explosaoAr {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+}
+
+#medidorPlante {
+    border: 5px solid green;
+    border-top-color: green;
+    border-radius: 10px;
+    width: 190px;
+    height: 30px;
+    background-color: rgb(37, 37, 37);
+    margin-left: 10px;
+    display: flex;
+    margin-top: 10px;
+}
+
+#painel {
+    color: white;
+    font-weight: bold;
+    padding-top: 10px;
+
+}
+
+#barraPlaneta {
+    width: 180px;
+    height: 20px;
+    background-color: rgb(162, 233, 162);
+    border-radius: 5px;
+}
+
+#hp {
+    color: white;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+#inicio img {
+    width: 600px;
+    height: 150px;
+    /*animation-name: bounce;
+    transform-origin: center bottom;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;*/
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    53%,
+    80%,
+    100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    40%,
+    43% {
+        -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -30px, 0);
+        transform: translate3d(0, -30px, 0);
+    }
+
+    70% {
+        -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+}
+
+#inicio {
+    width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-image: url('images/fundoInicio.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#option {
+    width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-image: url('images/fundoInicio.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#bt-inicia {
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 5px 5px 5px rgb(109, 109, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#bt-inicia:hover,
+#bt-option:hover,
+#bt-player:hover,#Start:hover {
+    color: yellow;
+    border-color: yellow;
+}
+
+#bt-option,
+#bt-player {
+    width: 150px;
+    height: 20px;
+    font-size: 25px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 5px 5px 5px rgb(109, 109, 255);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*===================================*/
+#dificuldade,
+#som {
+    width: 150px;
+    height: 20px;
+    margin: 45px 0 10px 0;
+    font-size: 25px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 5px 5px 5px rgb(109, 109, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#dificuldade {
+    margin-top: 10px;
+}
+
+#barra,
+#barra2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#campo,
+#campo2 {
+    width: 150px;
+    height: 30px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+#nivel,
+#nivel2,
+#nivel2,
+#nivel22 {
+    width: 100%;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 25px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 5px 5px 5px rgb(109, 109, 255);
+    cursor: pointer;
+}
+
+.st,
+.st2 {
+    font-size: 24px;
+    color: white;
+    background-color: rgb(124, 191, 23);
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#option-mode {
+    font-size: 35px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 5px 5px 5px rgb(109, 109, 255);
+}
+#Start{
+    font-size: 25px;
+    margin-top: 65px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 5px 5px 5px rgb(109, 109, 255);
+    cursor: pointer;
+}
+#controle{
+        width: 100%;
+        position: absolute;
+        top: 577px;
+        display: none;
+        justify-content: space-around;
+        align-content: center;  
+        align-items: center;
+}
+#direcionais{
+    display: flex;
+    flex-direction: column;
+}
+#cm,#dEe,#bx{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#dEe{
+    width: 150px;
+    justify-content: start;
+    cursor: pointer;
+}
+#direita{
+    margin-left: 49px;
+    cursor: pointer;
+}
+#esquerda{
+    margin-left: -24px;
+    cursor: pointer;
+}
+#btFire{
+    width: 60px;
+    cursor: pointer;
+}
+@media screen and (max-width: 830px) {
+    #container{
+        width: 100%;
+    }
+    #estrelas{
+        width: 100%;
+    }
+    #inicio{
+        width: 100%;
+    }
+    #inicio img{
+        width: 80%;
+    }
+    #bt-inicia{
+        width: 80%;
+        font-size: 20px;
+    }
+    #option{
+        width: 100%;
+    }
+    #gameOver,#win{
+        width: 100%;
+    }
+    #gameOver2 img {
+        width: 80%;
+    }
+    
+}    
+
+@media screen and (max-height: 740px) {
+    #controle{
+    top: 437px;
+}}
+@media screen and (max-height: 485px) {
+    #option-mode{
+        font-size: 24px;
+        margin: 5px;
+    }
+    #som{
+        margin: 20px 0 10px 0;
+    }
+    #Start{
+        margin-top: 46px;
+    }
+}
+
+@media screen and (min-height: 0px) and (max-height: 310px) {
+    #campo2,#som,.st2{
+        display: none;
+    }
+
+}
+@media screen and (min-height: 0px) and (max-height: 250px) {
+    #inicio img{
+        height: 50%;
+    }
+}

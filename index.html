@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto jogo de Nave</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="inicio">
+        <img src="images/logo.png" alt="" width="250">
+        <h1 id="bt-inicia">PUSH START</h1>
+        <h1 id="bt-player" onclick="player()">1 PLATER</h1>
+        <h1 id="bt-option">OPTION</h1>
+    </div>
+    <div id="option">
+        <h1 id="option-mode">OPTION MODE</h1>
+        <div id="dificuldade">Level</div>
+        <div id="barra">
+            <div class="st" onclick="passar()">
+                < </div>
+                    <div id="campo">
+                        <div id="nivel" class="niveis" onclick="df1()">Normal</div>
+                    </div>
+                    <div class="st" onclick="voltar()">></div>
+
+
+            </div>
+            <div id="som">MUSIC</div>
+            <div id="barra2">
+                <div class="st2" onclick="passarSom()">
+                    < </div>
+                        <div id="campo2">
+                            <div id="nivel2" class="niveis" onclick="df1()">ON</div>
+                        </div>
+                        <div class="st2" onclick="voltarSom()">></div>
+
+
+                </div>
+                <h3 id="Start" onclick="startGame()">Start Game</h3>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="container">
+
+        <div><audio src="images/musica-acao.mp3" id="musicGame"></audio></div>
+        <img src="images/aviao1.png" alt="" id="aviao">
+        <div id="painel">
+            <span id="hp"> Planeta Nerd</span>
+            <div id="medidorPlante">
+                <div id="barraPlaneta"></div>
+            </div>
+            <div id="contBombas"></div>
+        </div>
+    </div>
+    <div id="estrelas">
+        <img src="images/fundo-nuvens.png" alt="" id='estrela1'>
+        <img src="images/fundo-nuvens.png" alt="" id='estrela2'>
+    </div>
+    <div id="gameOver">
+        <div id="gameOver2">
+            <img src="images/gameover.png" alt="">
+            <div><audio src="images/gameOver.wav" id='somOver'></audio></div>
+        </div>
+    </div>
+    <div id="win">
+        <div id="win2">
+            <img src="images/win.jpg" alt="">
+            <div><audio src="images/win.wav" id="somWin"></audio></div>
+        </div>
+    </div>
+    <div id="controle">
+        <div id="direcionais">
+            <div id="cm">
+                <div id="cima" onMouseOut="teclaUp1(38)" onMouseOver="teclaDw1(38)" onclick="teclaDw1(38)"><img src="images/seta-cima.png" width="50" alt=""></div>
+            </div>
+            <div id="dEe">
+                <div id="esquerda" onMouseOut="teclaUp2(37)" onMouseOver="teclaDw2(37)" onclick="teclaDw2(37)"><img src="images/seta-esquerda.png" width="50" alt=""></div>
+                <div id="direita" onMouseOut="teclaUp2(39)" onMouseOver="teclaDw3(39)" onclick="teclaDw3(39)"><img src="images/seta-direita.png" width="50" alt=""></div>
+            </div>
+            <div id="bx">
+                <div id="baixo" onMouseOut="teclaUp1(40)" onMouseOver="teclaDw4(40)" onclick="teclaDw4(40)"><img src="images/seta-baixo.png" width="50" alt=""></div>
+            </div>
+
+        </div>
+        <div onclick="fire()"><img id="btFire" src="images/btfire.png" width="50" alt=""></div>
+    </div>
+</body>
+
+</html>
